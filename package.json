@@ -1,0 +1,23 @@
+{
+  "name": "deinfluencer-analyzer",
+  "version": "1.0.0",
+  "description": "AI-powered influencer authenticity analyzer",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && python -m uvicorn main:app --reload --port 8000",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm start",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && pytest",
+    "docker:dev": "docker-compose up --build",
+    "docker:prod": "docker-compose -f docker-compose.prod.yml up --build"
+  },
+  "keywords": ["influencer", "authenticity", "ai", "social-media", "analytics"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

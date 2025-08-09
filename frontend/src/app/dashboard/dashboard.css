@@ -1,0 +1,214 @@
+/* Nexora Dashboard Styles */
+/* Color Palette aligned with logo */
+:root {
+  --nexora-dark: #2a2d3a;
+  --nexora-darker: #1a1d2a;
+  --nexora-gold: #d4af37;
+  --nexora-light-gold: #f4e4a6;
+  --nexora-cream: #f5f1e8;
+  --nexora-white: #ffffff;
+  --nexora-gray: #6c757d;
+  --nexora-light-gray: #f8f9fa;
+}
+
+/* Dashboard Base */
+.dashboard-page {
+  background: linear-gradient(135deg, var(--nexora-cream) 0%, var(--nexora-light-gray) 100%);
+  min-height: 100vh;
+  color: var(--nexora-dark);
+}
+
+/* Welcome Section */
+.welcome-section {
+  background: linear-gradient(135deg, var(--nexora-darker) 0%, var(--nexora-dark) 100%);
+  color: var(--nexora-white);
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.welcome-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: 
+    linear-gradient(135deg, transparent 0%, transparent 45%, var(--nexora-gold) 50%, transparent 55%, transparent 100%),
+    linear-gradient(-135deg, transparent 0%, transparent 45%, var(--nexora-gold) 50%, transparent 55%, transparent 100%);
+  opacity: 0.1;
+  clip-path: polygon(0 100%, 100% 100%, 90% 0%, 10% 0%);
+}
+
+.welcome-title {
+  background: linear-gradient(45deg, var(--nexora-gold), var(--nexora-light-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.welcome-description {
+  color: var(--nexora-cream);
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.role-badge {
+  background: linear-gradient(45deg, var(--nexora-gold), var(--nexora-light-gold));
+  color: var(--nexora-dark);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  border: none;
+}
+
+/* Role-based Quick Actions */
+.quick-actions-card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.quick-actions-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Admin Actions */
+.admin-card {
+  border-left: 4px solid #dc3545;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+}
+
+.admin-card .card-title {
+  color: #dc3545;
+}
+
+.admin-card .btn-outline-danger {
+  border-color: #dc3545;
+  color: #dc3545;
+  transition: all 0.3s ease;
+}
+
+.admin-card .btn-outline-danger:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Brand Actions */
+.brand-card {
+  border-left: 4px solid #0d6efd;
+  background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+}
+
+.brand-card .card-title {
+  color: #0d6efd;
+}
+
+.brand-card .btn-outline-primary {
+  border-color: #0d6efd;
+  color: #0d6efd;
+  transition: all 0.3s ease;
+}
+
+.brand-card .btn-outline-primary:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Consumer Actions */
+.consumer-card {
+  border-left: 4px solid #198754;
+  background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
+}
+
+.consumer-card .card-title {
+  color: #198754;
+}
+
+.consumer-card .btn-outline-success {
+  border-color: #198754;
+  color: #198754;
+  transition: all 0.3s ease;
+}
+
+.consumer-card .btn-outline-success:hover {
+  background-color: #198754;
+  border-color: #198754;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Search Section Styling */
+.search-section {
+  background: var(--nexora-white);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+/* Analysis Results Styling */
+.analysis-results {
+  background: var(--nexora-white);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+/* Trending Section */
+.trending-section {
+  background: var(--nexora-white);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-section {
+    padding: 2rem 0;
+    border-radius: 0 0 1rem 1rem;
+  }
+  
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+  
+  .quick-actions-card {
+    margin-bottom: 1rem;
+  }
+  
+  .search-section,
+  .analysis-results,
+  .trending-section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
